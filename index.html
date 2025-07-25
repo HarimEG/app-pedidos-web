@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Pedidos</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app-container">
+        <header>
+            <h1>Gestor de Pedidos</h1>
+            <p id="order-id">Pedido #: <span>1</span></p>
+        </header>
+
+        <section id="customer-details">
+            <h2>Datos del Cliente</h2>
+            <input type="text" id="customer-name" placeholder="Escribe el nombre del cliente...">
+        </section>
+
+        <section id="product-selection">
+            <h2>Agregar Producto</h2>
+            <select id="product-list">
+                <option value="">-- Selecciona un perfume --</option>
+                </select>
+            <input type="number" id="product-quantity" value="1" min="1">
+            <button id="add-product-btn" class="btn-primary">Agregar al Pedido</button>
+        </section>
+
+        <section id="order-summary">
+            <h2>Resumen del Pedido</h2>
+            <table id="order-items-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cant.</th>
+                        <th>Precio</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+
+        <footer id="order-total">
+            <h2>Total: <span id="total-amount">$0.00</span></h2>
+            <button id="generate-pdf-btn" class="btn-secondary">Generar PDF</button>
+            <button id="new-order-btn" class="btn-secondary">Nuevo Pedido</button>
+        </footer>
+
+    </div>
+<script src="script.js"></script>
+    </body>
+</html>
