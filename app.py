@@ -115,13 +115,13 @@ if st.session_state.pedido:
     pdf.cell(30, 10, f"${total_pedido:,.2f}", 1, 1, 'R')
     
     # El botón de descarga convierte el PDF a bytes para que Streamlit lo pueda servir
+    # Código Corregido
     st.download_button(
         label="Descargar Cotización en PDF",
-        data=pdf.output(dest='S').encode('latin-1'),
+        data=pdf.output(),  # <--- LÍNEA SIMPLIFICADA
         file_name=f"cotizacion_{st.session_state.consecutivo}_{st.session_state.get('nombre_cliente', '').replace(' ','_')}.pdf",
         mime="application/pdf",
     )
-
 # --- BOTÓN PARA NUEVO PEDIDO ---
 if st.button("Nuevo Pedido"):
     st.session_state.consecutivo += 1
