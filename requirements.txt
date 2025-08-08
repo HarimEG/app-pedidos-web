@@ -1,3 +1,5 @@
-streamlit
-pandas
-fpdf2
+streamlit==1.25.0
+gspread==5.8.0
+pandas==2.0.3
+fpdf==1.7.2
+python-dateutil==2.8.2
